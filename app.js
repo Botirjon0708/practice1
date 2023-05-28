@@ -23,7 +23,7 @@ const personalMovieDB = {
       );
     }
   },
-  rememberMyFilms: function () {
+  rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
       const a = prompt("One of the last movies have you watched?", "").trim(),
         b = prompt("На сколько оцените его?", "");
@@ -37,7 +37,7 @@ const personalMovieDB = {
       }
     }
   },
-  detectPersonalLevel: function () {
+  detectPersonalLevel() {
     if (personalMovieDB.count < 10) {
       console.log("Watched quite a less movies");
     } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
@@ -48,19 +48,19 @@ const personalMovieDB = {
       console.log("Error");
     }
   },
-  showMyDb: function (hidden) {
+  showMyDb(hidden) {
     if (!hidden) {
       console.log(personalMovieDB);
     }
   },
-  toggleVisibleMyDB: function () {
+  toggleVisibleMyDB() {
     if (personalMovieDB.privat) {
       personalMovieDB.privat = false
     } else {
       personalMovieDB.privat = true;
     }
   },
-  writeYourGenres: function() {
+  writeYourGenres() {
     for (let i = 1; i < 2; i++) {
       //   let genre = prompt(`Your favorite genre ${i}`);
       //   if (genre === '' || genre == null) {
